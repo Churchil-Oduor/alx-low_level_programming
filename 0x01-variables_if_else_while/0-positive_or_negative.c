@@ -5,6 +5,7 @@
 /* betty style doc for function main goes there */
 /**
  * main - called whenevr the c program is executed
+ * Return: Returns a zero when the program executes correctly
  */
 int main(void)
 {
