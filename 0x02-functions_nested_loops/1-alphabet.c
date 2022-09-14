@@ -1,25 +1,15 @@
-#include <stdio.h>
 #include "main.h"
-/**
- * main - Entry point
- * Return: returns zero
- */
-int main(void)
-{
-	printChar();
-	return (0);
-}
 
 /**
  * printChar - this is our function
- * Return: returns characters in lower case
+ * Return: returns 0
  */
-void printChar(void)
+void print_alphabet(void)
 {
-	int i;
-	for (i = 97 ; i < 123 ; i++)
+	char ch;
+	for (ch = 97 ; ch < 123 ; ch++)
 	{
-		printf("%c", i);
+		_putchar(ch);
 	}
-	printf("\n");
+	_putchar("\n");
 }
