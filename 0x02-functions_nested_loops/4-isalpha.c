@@ -8,14 +8,15 @@
 
 int _isalpha(int c)
 {
-	char char_lower, char char_upper;
+	char chLower, chUpper;
 	int check;
 
-	for (char_lower = 65 ; char_lower < 91 ; char_lower++)
-	{
-		char_upper = char_lower + 32;
 
-		if (c == char_lower || c == char_upper)
+	for (chLower = 65 ; chLower < 91 ; chLower++)
+	{
+		chUpper = chLower + 32;
+
+		if (c == chLower || c == chUpper)
 		{
 			check = 1;
 			break;
