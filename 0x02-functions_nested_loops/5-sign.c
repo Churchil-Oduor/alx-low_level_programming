@@ -7,16 +7,14 @@
 
 int print_sign(int n)
 {
+	int sign;
+
 	if (n > 0)
-	{
-		return (1);
-	}
+		sign = 1;
 	else if (n == 0)
-	{
-		return (0);
-	}
+		sign = 0;
 	else
-	{
-		return (-1);
-	}
+		sign = -1;
+
+	return (sign);
 }
