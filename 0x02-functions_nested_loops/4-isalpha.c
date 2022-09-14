@@ -2,19 +2,20 @@
 
 /**
  * _isalpha - checks if passed c is an alphabet letter
+ * @c: is the parameter being passed
  * Return: returns 1 if true and 0 if false
  */
 
 int _isalpha(int c)
 {
-	char ch, charUpper;
+	char charLower, charUpper;
 	int check;
 
-	for (ch = 65 ; ch < 91 ; ch++)
+	for (charLower = 65 ; charLower < 91 ; charLower++)
 	{
-		charUpper = ch + 32;
+		charLower = charUpper + 32;
 
-		if (c == ch || c == charUpper)
+		if (c == charLower || c == charUpper)
 		{
 			check = 1;
 			break;
