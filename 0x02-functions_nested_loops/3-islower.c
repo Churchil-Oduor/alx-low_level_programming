@@ -7,8 +7,21 @@
 
 int _islower(int c)
 {
-	if (islower(c))
-		return (1);
-	else
-		return (0)
+	int check;
+	char ch;
+
+	for (ch = 97 ; ch < 123 ; ch++)
+	{
+		if (ch == c)
+		{
+			check = 1;
+			break;
+		}
+		else
+		{
+			check = 0;
+		}
+
+	}
+	return (check);
 }
