@@ -2,7 +2,7 @@
 
 /**
  * print_line - fx that prints line
- * @c: is the passed parameter indicating the extent of line
+ * @n: is the passed parameter indicating the extent of line
  * Return: void fx
  */
 
