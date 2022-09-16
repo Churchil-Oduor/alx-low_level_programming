@@ -1,4 +1,4 @@
-#include "main.h"
+ginclude "main.h"
 
 /**
  * print_line - fx that prints line
@@ -10,7 +10,7 @@ void print_line(int n)
 {
 	int i;
 
-	if(n =< 0)
+	if(n <= 0)
 	{
 		_putchar('\n');
 	}
