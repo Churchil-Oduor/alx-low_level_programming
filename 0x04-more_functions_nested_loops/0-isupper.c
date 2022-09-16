@@ -8,10 +8,10 @@
 
 int _isupper(int c)
 {
-	char ch = c;
+	char i, ch = c;
 	int result;
 
-	for (char i = 65 ; i < 91 ; i++)
+	for (i = 65 ; i < 91 ; i++)
 	{
 		if (i == ch)
 		{
