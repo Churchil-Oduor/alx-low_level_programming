@@ -1,4 +1,4 @@
-ginclude "main.h"
+#include "main.h"
 
 /**
  * print_line - fx that prints line
@@ -20,5 +20,6 @@ void print_line(int n)
 		{
 			_putchar(95);
 		}
+		_putchar('\n');
 	}
 }
