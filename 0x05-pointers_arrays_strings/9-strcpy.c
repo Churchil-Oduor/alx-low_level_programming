@@ -18,7 +18,7 @@ char *_strcpy(char *dest, char *src)
 
 	while (*(src + count) != '\0')
 		count++;
-	
+	count++;
 	while (count_2 != count)
 	{
 		*(dest + count_2) = *(src + count_2);
