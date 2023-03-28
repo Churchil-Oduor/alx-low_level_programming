@@ -10,9 +10,13 @@ void rev_string(char *s)
 {
 	int c_chars, count;
 
-	c_chars = -1;
+	c_chars = 0;
 
-	while (*(s + ++c_chars) != '\0');
+	while (*(s + c_chars) != '\0')
+	{
+		++c_chars;
+	}
+	printf("count: %d\n", c_chars);
 
 	char hold[c_chars];
 	count = c_chars;
