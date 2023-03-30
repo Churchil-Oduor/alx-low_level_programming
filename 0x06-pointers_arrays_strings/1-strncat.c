@@ -2,8 +2,9 @@
 
 /**
  * _strncat - concatenates string src n bytes to des.
- * @des: 1st string passed.
+ * @dest: 1st string passed.
  * @src: 2nd string passed.
+ * @n: number of characters of src to be appended to dest.
  * Return: Returns a pointer to dest.
  */
 
