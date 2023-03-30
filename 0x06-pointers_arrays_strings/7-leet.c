@@ -6,8 +6,8 @@
  * Return: pointer to str.
  */
 
-char *leet(char *str) {
-	
+char *leet(char *str)
+{
 	int i, j;
 
 	char caps[] = "AEOTL";
