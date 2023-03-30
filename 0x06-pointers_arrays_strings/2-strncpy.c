@@ -4,6 +4,7 @@
  * _strncpy - copies n characters from src to dest.
  * @dest: string variable to be copied to.
  * @src: string to copy.
+ * @n: length of string src.
  * Return: returns the pointer to dest.
  */
 
