@@ -1,9 +1,9 @@
 #include "main.h"
 
 /**
- * cap_string - capitalizes every word of a string.
- * @str: string to be capitalized.
- * @Return: pointer to str.
+ * cap_string - capitalizes the Strings in str.
+ * @str: passed string to be capitalized.
+ * Return: returns the pointer to str.
  */
 
 char *cap_string(char *str)
@@ -20,14 +20,13 @@ char *cap_string(char *str)
 		ch = *(str + counter);
 
 		if (ch == ' ' || ch == ',' || ch == ';' || ch == '.'
-				|| ch == '!' || ch == '?' ||ch == '"' 
+				|| ch == '!' || ch == '?' || ch == '"'
 				|| ch == '(' || ch == ')' || ch == '{'
-				|| ch == '}' || ch == '\n' || ch == '\t'
-				)
+				|| ch == '}' || ch == '\n' || ch == '\t')
 		{
 			next_char = *(str + counter + 1);
 			if (next_char >= 97 && next_char <= 122)
-				*(str + counter + 1) -= 32; 
+				*(str + counter + 1) -= 32;
 		}
 	}
 	return (str);
