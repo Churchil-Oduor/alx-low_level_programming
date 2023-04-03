@@ -19,8 +19,9 @@ void print_diagsums(int *a, int size)
 		leading_diag += a[x];
 		a += size;
 	}
-	
+
 	a = a - size;
+
 
 	for (y = 0; y < size; y++)
 	{
