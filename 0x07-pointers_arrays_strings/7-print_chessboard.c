@@ -3,7 +3,6 @@
 /**
  * print_chessboard - prints the chessboard.
  * @a: array indicating a row of 8 columns.
- * Return: Prints a chess board.
  */
 
 void print_chessboard(char (*a)[8])
