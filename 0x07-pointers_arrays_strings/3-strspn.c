@@ -14,6 +14,7 @@ unsigned int _strspn(char *s, char *accept)
 	int i, j, check;
 
 	res = 0;
+	check = 0;
 
 	for (i = 0; i < s[i]; i++)
 	{
@@ -27,10 +28,6 @@ unsigned int _strspn(char *s, char *accept)
 		}
 		if (check != 1)
 			break;
-		else
-		{
-			check = 0;
-		}
 	}
 
 	if (res > 0)
