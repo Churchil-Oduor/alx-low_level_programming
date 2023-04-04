@@ -10,24 +10,24 @@
 
 char *_strchr(char *s, char c)
 {
-	int index, size, num_chars;
+	int i, index;
 
-	num_chars = 0;
-
-	while (*(s + num_chars) != '\0')
-		num_chars++;
+	index = -1;
 
 
-	for (index = 0; s[index] != '\0'; index++)
+
+
+	for (i = 0; s[i] != '\0'; i++)
 	{
-		if (s[index] == c)
+		if (s[i] == c)
 		{
-			do
-			{
-				buffer[]
-			}
+			index = i;
+			break;
 		}
-
 	}
-	return (buffer);
+
+	if (index != -1)
+		return (s + index);
+	else
+		return (NULL);
 }
