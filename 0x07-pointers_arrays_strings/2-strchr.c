@@ -29,5 +29,5 @@ char *_strchr(char *s, char c)
 	if (index != -1)
 		return (s + index);
 	else
-		return (NULL);
+		return ('\0');
 }
