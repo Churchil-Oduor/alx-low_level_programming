@@ -12,13 +12,13 @@
 char *_strdup(char *str)
 {
 	char *copy;
-	int num_chars;
+	int num_chars, index;
 
 	num_chars = 0;
 
 	if (*str)
 	{
-		while (*(str + count) != '\0')
+		while (*(str + num_chars) != '\0')
 			++num_chars;
 
 		num_chars++;
