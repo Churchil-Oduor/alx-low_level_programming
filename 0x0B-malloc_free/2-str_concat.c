@@ -15,7 +15,7 @@ char *str_concat(char *s1, char *s2)
 
 	num1 = 0, num2 = 0, index_2 = 0;
 
-	if (*s1 || *s2)
+	if (*s1 || *s2 || s1 != NULL || s2 != NULL)
 	{
 		while (s1[num1] != '\0')
 			++num1;
@@ -25,18 +25,20 @@ char *str_concat(char *s1, char *s2)
 
 		concat = malloc(sizeof(*concat) * (num1 + num2 + 1));
 
-		for (index_1 = 0; index_1 < (num1 + num2 + 1); index_1++)
+		if (concat != NULL)
 		{
-			if (index_1 < num1)
-				concat[index_1] = s1[index_1];
-			else if (index_1 < (num1 + num2))
-				concat[index_1] = s2[index_2++];
-			else
-				concat[index_1] = '\0';
+			for (index_1 = 0; index_1 < (num1 + num2 + 1); index_1++)
+			{
+				if (index_1 < num1)
+					concat[index_1] = s1[index_1];
+				else if (index_1 < (num1 + num2))
+					concat[index_1] = s2[index_2++];
+				else
+					concat[index_1] = '\0';
+			}
+
+			return (concat);
 		}
-
-		return (concat);
 	}
-
 	return (NULL);
 }
