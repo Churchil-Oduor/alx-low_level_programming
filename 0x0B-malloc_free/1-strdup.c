@@ -24,12 +24,16 @@ char *_strdup(char *str)
 		num_chars++;
 		copy = malloc(sizeof(*copy) * num_chars);
 
-		for (index = 0; index < num_chars; index++)
-			copy[index] = str[index];
+		if (copy != NULL)
+		{
 
-		copy[++index] = '\0';
+			for (index = 0; index < num_chars; index++)
+				copy[index] = str[index];
 
-		return (copy);
+			copy[++index] = '\0';
+
+			return (copy);
+		}
 	}
 
 	return (NULL);
