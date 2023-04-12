@@ -17,30 +17,34 @@ char *argstostr(int ac, char **av)
 	index = 0;
 	total_chars = 0;
 
-	for (row = 0; row < ac; row++)
-	{
-		for (colum = 0; av[row][colum] != '\0'; colum++)
-			++total_chars;
-
-		++total_chars;
-	}
-
-	buffer = malloc(sizeof(*buffer) * (total_chars + 1));
-
-	if (buffer != NULL)
+	if (ac > 0 && av != NULL)
 	{
 		for (row = 0; row < ac; row++)
 		{
 			for (colum = 0; av[row][colum] != '\0'; colum++)
-				buffer[index++] = av[row][colum];
+				++total_chars;
 
-			buffer[index++] = '\n';
+			++total_chars;
 		}
 
-		buffer[total_chars + 1] = '\0';
-		return (buffer);
+		buffer = malloc(sizeof(*buffer) * (total_chars + 1));
+
+		if (buffer != NULL)
+		{
+			for (row = 0; row < ac; row++)
+			{
+				for (colum = 0; av[row][colum] != '\0'; colum++)
+					buffer[index++] = av[row][colum];
+
+				buffer[index++] = '\n';
+			}
+
+			buffer[total_chars + 1] = '\0';
+			return (buffer);
+		}
+
+		return (NULL);
+
 	}
-
 	return (NULL);
-
 }
