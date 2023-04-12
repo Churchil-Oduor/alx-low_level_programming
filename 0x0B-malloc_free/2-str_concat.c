@@ -30,7 +30,7 @@ char *str_concat(char *s1, char *s2)
 			if (index_1 < num1)
 				concat[index_1] = s1[index_1];
 			else if (index_1 < (num1 + num2))
-				concat[index_1] = s2[index_2];
+				concat[index_1] = s2[index_2++];
 			else
 				concat[index_1] = '\0';
 		}
