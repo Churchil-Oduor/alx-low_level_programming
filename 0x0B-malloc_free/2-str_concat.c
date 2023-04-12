@@ -15,7 +15,7 @@ char *str_concat(char *s1, char *s2)
 
 	num1 = 0, num2 = 0, index_2 = 0;
 
-	if (*s1 && *s2)
+	if (*s1 || *s2)
 	{
 		while (s1[num1] != '\0')
 			++num1;
