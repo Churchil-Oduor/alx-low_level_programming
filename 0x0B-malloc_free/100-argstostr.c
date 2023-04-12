@@ -17,7 +17,7 @@ char *argstostr(int ac, char **av)
 	index = 0;
 	total_chars = 0;
 
-	for (row = 1; row < ac; row++)
+	for (row = 0; row < ac; row++)
 	{
 		for (colum = 0; av[row][colum] != '\0'; colum++)
 			++total_chars;
@@ -29,7 +29,7 @@ char *argstostr(int ac, char **av)
 
 	if (buffer != NULL)
 	{
-		for (row = 1; row < ac; row++)
+		for (row = 0; row < ac; row++)
 		{
 			for (colum = 0; av[row][colum] != '\0'; colum++)
 				buffer[index++] = av[row][colum];
