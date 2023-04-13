@@ -15,7 +15,10 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 	char *mem;
 	unsigned int num1, num2, index, count, total_count;
 
-	num1 = _strlen(s1), num2 = _strlen(s2), count = 0, total_count = 0;
+	num1 = _strlen(s1);
+       	num2 = _strlen(s2);
+	count = 0;
+       	total_count = 0;
 
 	if ((num1 + num2) > 0)
 	{
@@ -41,7 +44,7 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 				mem[index] = s2[count++];
 		}
 
-		mem[++index] = '\0';
+		mem[index] = '\0';
 		return (mem);
 	}
 
