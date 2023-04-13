@@ -1,6 +1,6 @@
 #include "main.h"
 #include <stdlib.h>
-#include <stdio.h>
+
 unsigned int _strlen(char *str);
 /**
  * string_nconcat - concatenates two strings.
