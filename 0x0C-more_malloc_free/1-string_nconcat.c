@@ -20,9 +20,9 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 	if ((num1 + num2) > 0)
 	{
 		if (num2 >= n)
-			mem = malloc(sizeof(*mem) * (num1 + n));
+			mem = malloc(sizeof(*mem) * (num1 + n + 1));
 		else
-			mem = malloc(sizeof(*mem) * (num1 + num2));
+			mem = malloc(sizeof(*mem) * (num1 + num2 + 1));
 
 		if (mem == NULL)
 			return (NULL);
@@ -34,6 +34,8 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 			else if (index < (num1 + n) && num2 > 0 && s2 != NULL)
 				mem[index] = s2[count++];
 		}
+
+		mem[++index] = '\0';
 		return (mem);
 	}
 
