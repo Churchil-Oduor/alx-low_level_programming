@@ -49,8 +49,10 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 	}
 
 	mem = malloc(sizeof(*mem));
-	mem[0] = '\0';
+	if(mem == NULL)
+		return (NULL);
 
+	mem[0] = '\0';
 	return (mem);
 }
 
