@@ -13,21 +13,27 @@ unsigned int _strlen(char *str);
 char *string_nconcat(char *s1, char *s2, unsigned int n)
 {
 	char *mem;
-	unsigned int num1, num2, index, count;
+	unsigned int num1, num2, index, count, total_count;
 
-	num1 = _strlen(s1), num2 = _strlen(s2), count = 0;
+	num1 = _strlen(s1), num2 = _strlen(s2), count = 0, total_count = 0;
 
 	if ((num1 + num2) > 0)
 	{
 		if (num2 >= n)
-			mem = malloc(sizeof(*mem) * (num1 + n + 1));
-		else
-			mem = malloc(sizeof(*mem) * (num1 + num2 + 1));
+		{
+			total_count = num1 + n + 1;
+			mem = malloc(sizeof(*mem) * total_count);
 
+		}
+		else
+		{
+			total_count = num1 + num2 + 1;
+			mem = malloc(sizeof(*mem) * total_count);
+		}
 		if (mem == NULL)
 			return (NULL);
 
-		for (index = 0; index < (num1 + n); index++)
+		for (index = 0; index < total_count; index++)
 		{
 			if (index < num1)
 				mem[index] = s1[index];
