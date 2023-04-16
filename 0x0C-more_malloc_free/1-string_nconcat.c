@@ -22,13 +22,11 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 
 	if (num1 == 0 && num2 == 0)
 	{
-		mem = malloc(sizeof(int) * 3);
+		mem = malloc(sizeof(int) * 1);
 
 		if (mem == NULL)
 			return (NULL);
-		mem[0] = ' ';
-		mem[1] = ' ';
-		mem[2] = '\0';
+		mem[0] = '\0';
 
 		return (mem);
 	}
