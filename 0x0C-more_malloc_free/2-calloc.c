@@ -4,8 +4,8 @@
 /**
  * _calloc - allocates memory for an array, using the malloc function.
  *
- * @nmemb - number of elements in array.
- * @size - size of each element in array in bytes.
+ * @nmemb: number of elements in array.
+ * @size: size of each element in array in bytes.
  * Return: pointer to memory containing array.
  */
 
