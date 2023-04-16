@@ -16,42 +16,47 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 	unsigned int num1, num2, index, count, total_count;
 
 	num1 = _strlen(s1);
-       	num2 = _strlen(s2);
+	num2 = _strlen(s2);
 	count = 0;
-       	total_count = 0;
+	total_count = 0;
 
-	if ((num1 * num2) > 0)
+	if (num1 == 0 && num2 == 0)
 	{
-		if (num2 >= n)
-		{
-			total_count = num1 + n + 1;
-			mem = malloc(sizeof(*mem) * total_count);
+		mem = malloc(sizeof(int) * 3);
 
-		}
-		else
-		{
-			total_count = num1 + num2 + 1;
-			mem = malloc(sizeof(*mem) * total_count);
-		}
 		if (mem == NULL)
 			return (NULL);
+		mem[0] = ' ';
+		mem[1] = ' ';
+		mem[2] = '\0';
 
-		for (index = 0; index < total_count; index++)
-		{
-			if (index < num1)
-				mem[index] = s1[index];
-			else if (index < (num1 + n) && num2 > 0 && s2 != NULL)
-				mem[index] = s2[count++];
-		}
-
-		mem[index] = '\0';
 		return (mem);
 	}
 
-	mem = malloc(sizeof(*mem));
-	if(mem == NULL)
+	if (num2 >= n)
+	{
+		total_count = num1 + n + 1;
+		mem = malloc(sizeof(int) * total_count);
+
+	}
+	else
+	{
+		total_count = num1 + num2 + 1;
+		mem = malloc(sizeof(int) * total_count);
+	}
+
+	if (mem == NULL)
 		return (NULL);
-	mem[0] = '\0';
+
+	for (index = 0; index < (total_count - 1); index++)
+	{
+		if (index < num1)
+			mem[index] = s1[index];
+		else
+			mem[index] = s2[count++];
+	}
+
+	mem[total_count - 1] = '\0';
 
 	return (mem);
 }
