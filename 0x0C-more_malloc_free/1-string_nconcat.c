@@ -20,7 +20,7 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 	count = 0;
        	total_count = 0;
 
-	if ((num1 + num2) > 0)
+	if ((num1 * num2) > 0)
 	{
 		if (num2 >= n)
 		{
