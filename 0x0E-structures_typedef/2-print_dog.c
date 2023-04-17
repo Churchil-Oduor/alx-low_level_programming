@@ -23,7 +23,7 @@ void print_dog(struct dog *d)
 
 		if (name == NULL)
 			name = "(nil)";
-		else if (owner
+		else if (owner == NULL)
 			owner = "(nil)";
 	}
 
