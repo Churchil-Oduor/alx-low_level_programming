@@ -4,7 +4,7 @@
 /**
  * free_dog - frees dogs.
  *
- * @d - pointer to memory dog to be freed.
+ * @d: pointer to memory dog to be freed.
  *
  * Return: Nothing.
  */

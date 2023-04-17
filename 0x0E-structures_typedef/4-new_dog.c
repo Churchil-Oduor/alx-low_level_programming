@@ -7,7 +7,7 @@
  * @name: name of dog.
  * @age: age of dog.
  * @owner: owner of dog.
- * 
+ *
  * Return: pointer to new dog in memory.
  */
 

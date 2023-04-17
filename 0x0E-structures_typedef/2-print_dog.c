@@ -3,7 +3,7 @@
 
 /**
  * print_dog - prints details of dog.
- * 
+ *
  * @d: pointer to memory holding struct d.
  *
  * Return: Nothing.
