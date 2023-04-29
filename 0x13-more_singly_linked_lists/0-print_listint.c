@@ -28,6 +28,7 @@ size_t print_listint(const listint_t *h)
 		{
 			++node_count;
 			printf("%d\n", mem->n);
+			free(mem);
 			return (node_count);
 		}
 
@@ -35,6 +36,4 @@ size_t print_listint(const listint_t *h)
 		printf("%d\n", mem->n);
 		mem = mem->next;
 	}
-
-	return (-1);
 }
