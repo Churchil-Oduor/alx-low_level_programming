@@ -1,8 +1,7 @@
-#include <stdio.h>
+#include "main.h"
 
 /**
  * print_alphabet - prints alphabet in lowercase.
- * @void: takes in no argument.
  * Return: has no return type.
  */
 void print_alphabet(void)
