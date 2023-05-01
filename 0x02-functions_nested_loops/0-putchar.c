@@ -3,8 +3,6 @@
 
 /**
  * main - prints the text '_putchar'
- *
- * @void: takes no parameter
  * Return: Always returns a zero
  */
 int main(void)
