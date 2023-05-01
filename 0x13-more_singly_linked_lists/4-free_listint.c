@@ -1,5 +1,6 @@
 #include <stdlib.h>
 #include "lists.h"
+#include <stdio.h>
 
 /**
  * free_listint - frees a listint_t.
@@ -10,31 +11,12 @@
 
 void free_listint(listint_t *head)
 {
-	listint_t **node;
+	listint_t *node;
 
-	node = malloc(sizeof(node));
-	if (node == NULL)
-		exit(1);
-
-	if (head->next == NULL)
-		free(head);
-
-	*node = head;
-	head = head->next;
-
-	while (1)
+	while (head != NULL)
 	{
-		free(*node);
-		*node = head;
-		head = head->next;
-		if (head->next == NULL)
-		{
-			free(*node);
-			free(head);
-			break;
-		}
-
+		node = head->next;
+		free(head);
+		head = node;
 	}
-
-	free(node);
 }
