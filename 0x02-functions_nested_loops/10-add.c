@@ -1,5 +1,6 @@
 #include "main.h"
-/*
+
+/**
  * add - this functions adds the integer parameters passed to it.
  * @x: is the first integer passed.
  * @y: is the 2nd integer passed.

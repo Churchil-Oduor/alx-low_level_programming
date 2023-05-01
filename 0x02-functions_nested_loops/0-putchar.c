@@ -1,6 +1,7 @@
 #include <stdio.h>
 #include "main.h"
-/*
+
+/**
  * main - prints the text '_putchar'
  *
  * @void: takes no parameter

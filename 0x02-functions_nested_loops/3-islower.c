@@ -1,6 +1,6 @@
 #include "main.h"
 
-/*
+/**
  * _islower - checks if alphabet entered is lowercase.
  * @c: is the alphabet to be checked
  * Return: returns 1 if @c is lowercase otherwise 0.

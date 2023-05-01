@@ -1,9 +1,10 @@
 #include <stdio.h>
 #include "main.h"
-/*
+
+/**
  * natural - computes sum of natural numbers.
  * @n: parameter entered.
- * Return: voi type function
+ * Return: void type function
  */
 void natural(int n)
 {
@@ -22,7 +23,7 @@ void natural(int n)
 	printf("%d\n", sum);
 }
 
-/*
+/**
  * main - main function.
  * Return: void function.
  */
