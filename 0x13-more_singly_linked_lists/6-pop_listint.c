@@ -14,19 +14,15 @@ int pop_listint(listint_t **head)
 	int data;
 	listint_t *node;
 
-	if (*head == NULL)
-		return (0);
+	data = 0;
 
-	node = malloc(sizeof(node));
-
-	if (node == NULL)
-		return (0);
-
-	node = *head;
-	data = node->n;
-	*head = (*head)->next;
-
-	free(node);
+	if (*head)
+	{
+		node = (*head)->next;
+		data = (*head)->n;
+		free(*head);
+		*head = node;
+	}
 
 	return (data);
 }
