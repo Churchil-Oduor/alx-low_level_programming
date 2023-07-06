@@ -12,7 +12,7 @@ void print_binary(unsigned long int n)
 {
 	unsigned int bits, mask;
 
-	bits = sizeof(n) * 2;
+	bits = sizeof(n) * 8;
 	mask = 1u << bits;
 
 	if (n == 0)
