@@ -20,15 +20,24 @@ ssize_t read_textfile(const char *filename, size_t letters)
 	buffer = malloc(sizeof(buffer) * letters);
 	fd = open(filename, O_RDONLY);
 	if (fd == -1)
+	{
+		close(fd);
 		return (0);
+	}
 
 	readbytes = read(fd, buffer, letters);
 	if (readbytes == -1)
+	{
+		close(fd);
 		return (0);
+	}
 
 	written_bytes = write(1, buffer, letters);
 	if (written_bytes == -1)
+	{
+		close(fd);
 		return (0);
+	}
 	close(fd);
 	free(buffer);
 
