@@ -4,9 +4,9 @@
 #include "main.h"
 #include <unistd.h>
 
-#define BUFFSIZE 1024
 /**
- * read_textfile - reads a text file and prints it to the posix standard output.
+ * read_textfile - reads a text file and
+ * prints it to the posix standard output.
  * @filename: name of the file to be read.
  * @letters: number of letters to read and print.
  * Return: 0 if file cannot be opened or read or is NULL.
