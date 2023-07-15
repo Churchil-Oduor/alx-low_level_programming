@@ -20,7 +20,7 @@ int main(int argc, char **argv)
 
 	if (argc != 3)
 	{
-		dprintf(STDOUT_FILENO, "Usage: cp file_from file_to");
+		dprintf(STDOUT_FILENO, "Usage: cp file_from file_to\n");
 		exit(97);
 	}
 
@@ -29,7 +29,7 @@ int main(int argc, char **argv)
 
 	if (fd1 == -1)
 	{
-		dprintf(STDERR_FILENO, "Error: Can't read from file %s", argv[1]);
+		dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", argv[1]);
 		exit(98);
 	}
 
@@ -37,7 +37,7 @@ int main(int argc, char **argv)
 			S_IWUSR | S_IRGRP | S_IWGRP | S_IROTH);
 	if (fd2 == -1)
 	{
-		dprintf(STDERR_FILENO, "Error: Can't write to %s", argv[2]);
+		dprintf(STDERR_FILENO, "Error: Can't write to %s\n", argv[2]);
 		exit(99);
 	}
 
@@ -46,9 +46,9 @@ int main(int argc, char **argv)
 	c2 = close(fd1);
 
 	if (c1 == -1)
-		dprintf(STDERR_FILENO, "Error: Can't close %d", c1);
+		dprintf(STDERR_FILENO, "Error: Can't close %d\n", c1);
 	else if (c2 == -1)
-		dprintf(STDERR_FILENO, "Error: Can't close %d", c2);
+		dprintf(STDERR_FILENO, "Error: Can't close %d\n", c2);
 
 
 
