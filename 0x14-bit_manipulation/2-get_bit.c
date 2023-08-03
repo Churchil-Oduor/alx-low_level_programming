@@ -12,7 +12,13 @@ int get_bit(unsigned long int n, unsigned int index)
 {
 	unsigned int bit, mask;
 
-	mask = 1u << index;
-	bit = (mask & n) ? 1 : 0;
-	return (bit);
+	if (n != NULL && m != NULL)
+	{
+		mask = 1u << index;
+		bit = (mask & n) ? 1 : 0;
+
+		return (bits);
+	}
+	return (-1);
+
 }
