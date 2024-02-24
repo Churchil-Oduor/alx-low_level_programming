@@ -10,38 +10,40 @@
 
 void bubble_sort(int *array, size_t size)
 {
-	loop_utils(array);
-}
+	int i, j, len, swapped;
 
-/**
- * loop_utils - looping and swaping function
- * @array: int array to be looped.
- */
-
-void loop_utils(int *array)
-{
-	int len, i, temp, checker;
-
-	len = sizeof(array) / sizeof(array[0]);
-	checker = 0;
+	swapped = 0;
+	len = (int)size;
 
 	for (i = 0; i < len; i++)
 	{
-		if (array[i] < array[i + 1])
+		swapped = 0;
+
+		for (j = 0; j < len - 1; j++)
 		{
-			checker = 1;
-			/*swapping*/
-			temp = array[i];
-			array[i] = array[i + 1];
-			array[i + 1] = temp;
-
-			/**print array**/
-			print_array(array, len);
+			if (array[j] > array[j + 1])
+			{
+				swap(&array[j], &array[j + 1]);
+				swapped = 1;
+				print_array(array, size);
+			}
 		}
-		/*check to see if there us need to come back again*/
-		if ((i == len - 1) && checker == 1)
-			loop_utils(array);
-
-		checker = 0;
+		if (!swapped)
+			break;
 	}
+}
+
+/**
+ * swap - swaps the values of ints given to it.
+ * @x: first integer.
+ * @y: second integer.
+ */
+
+void swap(int *x, int *y)
+{
+	int temp;
+
+	temp = *x;
+	*x = *y;
+	*y = temp;
 }
