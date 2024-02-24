@@ -1,0 +1,2 @@
+# exclude all main.c files
+*main.c
