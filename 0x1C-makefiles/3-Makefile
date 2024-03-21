@@ -1,0 +1,8 @@
+.PHONY=all
+all: clean oclean, fclean, re
+
+SRC:=$(wildcard *.c)
+NAME=school
+
+
+

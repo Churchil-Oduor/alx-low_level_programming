@@ -1,0 +1,10 @@
+.PHONY: all
+CC = gcc
+SRC = $(wildcard *.c)
+all:$(SRC:%.c=%)
+
+%: %.o
+	$(CC) -c -o $< $@.c
+
+%: %.c
+	$(CC) $< -o $@

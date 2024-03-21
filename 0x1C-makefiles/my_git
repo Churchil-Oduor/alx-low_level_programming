@@ -1,0 +1,5 @@
+#!/usr/bin/bash
+
+recent=$( ls -lt | head -n 2 | tail -n 1| awk '{print $NF}')
+git add $recent
+git push
