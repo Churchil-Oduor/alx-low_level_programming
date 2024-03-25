@@ -1,8 +1,17 @@
 .PHONY: all
 CC = gcc
-SRC = $(wildcard *.c)
+SRC = main.c school.c
 NAME = school
-BINS = $(SRC:%.c=%)
+OBJ=main.o school.o
 
-all: $(BINS) m.h
-	echo $(BINS)
+all: $(NAME)
+
+$(NAME): $(OBJ)
+	$(CC) -o $@ $^
+
+%.o:%.c
+	$(CC) -Wall -Wextra -c -o $@ $^
+
+clean:
+	rm -rf *.o $(NAME)
+
