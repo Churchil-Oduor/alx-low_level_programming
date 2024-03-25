@@ -1,8 +1,36 @@
-.PHONY=all
-all: clean oclean, fclean, re
+.PHONY=all fclean oclean clean re
 
-SRC:=$(wildcard *.c)
+#source files
+SRC=main.c school.c
+#name of the executable
 NAME=school
+#name of the c compiler
+CC=gcc
+#object files here
+OBJ=$(SRC:.c=.o)
+RM=rm
 
+all:$(NAME)
+
+$(NAME): $(OBJ)
+	$(CC) -o $@ $^
+
+%.o:%.c
+	$(CC) -c -o $@ $^
+
+clean:
+	$(RM) *.swp #*
+
+oclean:
+	$(RM) *.o
+
+fclean:
+	$(RM) *.o $(NAME) *.swp *#
+
+re: $(NAME)
+	@for name $(SRC); do\
+		echo $(name); \
+	done
+		
 
 
