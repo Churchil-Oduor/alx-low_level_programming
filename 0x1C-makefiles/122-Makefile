@@ -1,0 +1,9 @@
+.PHONY: all
+CC:= gcc
+SRC=$(wildcard *.c)
+NAME=$(SRC:%.c=%)
+
+all: $(NAME)
+
+%: %.o
+	@echo "Hello"
