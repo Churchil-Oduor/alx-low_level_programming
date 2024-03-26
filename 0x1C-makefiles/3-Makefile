@@ -1,4 +1,4 @@
-.PHONY=all fclean oclean clean re
+.PHONY:all fclean oclean clean re
 
 #source files
 SRC=main.c school.c
@@ -19,18 +19,18 @@ $(NAME): $(OBJ)
 	$(CC) -c -o $@ $^
 
 clean:
-	$(RM) *.swp #*
+	$(RM) -f *~ $(NAME)
 
-oclean:
-	$(RM) *.o
+oclean:$(OBJ)
+	$(RM) -f $^
 
-fclean:
-	$(RM) *.o $(NAME) *.swp *#
+fclean: clean oclean
 
-re: $(NAME)
-	@for name $(SRC); do\
-		echo $(name); \
-	done
-		
+re:all
+	$(RM) -f main.o school.o
+	@touch main.c school.c
+
+
+
 
 
